@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli - DG Müzik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #343a40;
+            color: #fff;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        .action-buttons button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h3 class="text-center">DG Müzik-Admin</h3>
+        <a href="#urunler"><i class="fas fa-guitar"></i> Ürünler</a>
+        <a href="#siparisler"><i class="fas fa-shopping-cart"></i> Siparişler</a>
+        <a href="#kullanicilar"><i class="fas fa-users"></i> Kullanıcılar</a>
+        <a href="#yorumlar"><i class="fas fa-comments"></i> Yorumlar</a>
+        <a href="#yorumlar"><i class="fas fa-comments"></i> Duyurular</a>
+        <a href="anasayfa2.html"><i class="fas fa-cog"></i> Çıkış</a>
+    </div>
+    
+
+    <div class="main-content">
+        <p><strong>Genel Site İstatistikleri:</strong></p>
+
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Toplam Ürün</h5>
+                        <p class="card-text" id="total-products">15</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Toplam Sipariş</h5>
+                        <p class="card-text" id="total-orders">128</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Aktif Kullanıcı</h5>
+                        <p class="card-text" id="active-users">65</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Bekleyen Yorum</h5>
+                        <p class="card-text" id="pending-comments">12</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <canvas id="siteStatisticsChart" width="800" height="300"></canvas>
+        </div>
+        
+
+        <section id="urunler">
+            <h3>Ürünler</h3>
+            <div class="table-wrapper">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Kategori</th>
+                            <th>Fiyat</th>
+                            <th>Stok</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-table">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+<section id="siparisler" class="mt-5">
+    <h3>Siparişler</h3>
+    <div class="table-wrapper">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Sipariş ID</th>
+                    <th>Müşteri</th>
+                    <th>Ürün</th>
+                    <th>Tarih</th>
+                    <th>Durum</th>
+                    <th>Toplam Tutar</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#001</td>
+                    <td>Ali Yılmaz</td>
+                    <td>Akustik Gitar</td>
+                    <td>12.12.2024</td>
+                    <td>Onaylandı</td>
+                    <td>60,041.00 TL</td>
+                    <td>
+                        <button class="btn btn-info btn-sm">Detay</button>
+                        <button class="btn btn-danger btn-sm">İptal</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#002</td>
+                    <td>Ayşe Demir</td>
+                    <td>Klarnet</td>
+                    <td>11.12.2024</td>
+                    <td>Beklemede</td>
+                    <td>41,647.00 TL</td>
+                    <td>
+                        <button class="btn btn-info btn-sm">Detay</button>
+                        <button class="btn btn-danger btn-sm">İptal</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#003</td>
+                    <td>Mehmet Ak</td>
+                    <td>Keman</td>
+                    <td>10.12.2024</td>
+                    <td>İptal Edildi</td>
+                    <td>8,659.00 TL</td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm">Detay</button>
+                        <button class="btn btn-secondary btn-sm" >İptal</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#004</td>
+                    <td>Fatma Yıldız</td>
+                    <td>Piyano</td>
+                    <td>09.12.2024</td>
+                    <td>Kargoya Verildi</td>
+                    <td>1,723,404.00 TL</td>
+                    <td>
+                        <button class="btn btn-info btn-sm">Detay</button>
+                        <button class="btn btn-danger btn-sm">İptal</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="kullanicilar" class="mt-5">
+    <h3>Kullanıcılar</h3>
+    <div class="table-wrapper">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ad</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    <th>Kayıt Tarihi</th>
+                    <th>Durum</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ali Yılmaz</td>
+                    <td>ali.yilmaz@example.com</td>
+                    <td>+90 532 123 45 67</td>
+                    <td>10.11.2023</td>
+                    <td>Aktif</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Düzenle</button>
+                        <button class="btn btn-danger btn-sm">Sil</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ayşe Demir</td>
+                    <td>ayse.demir@example.com</td>
+                    <td>+90 532 765 43 21</td>
+                    <td>12.12.2023</td>
+                    <td>Pasif</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Düzenle</button>
+                        <button class="btn btn-danger btn-sm">Sil</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mehmet Ak</td>
+                    <td>mehmet.ak@example.com</td>
+                    <td>+90 542 111 22 33</td>
+                    <td>05.10.2023</td>
+                    <td>Aktif</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Düzenle</button>
+                        <button class="btn btn-danger btn-sm">Sil</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Fatma Yıldız</td>
+                    <td>fatma.yildiz@example.com</td>
+                    <td>+90 533 444 55 66</td>
+                    <td>20.09.2023</td>
+                    <td>Beklemede</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Düzenle</button>
+                        <button class="btn btn-danger btn-sm">Sil</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+       
+    </div>
+
+    <script>
+        const products = [
+            { name: "Seagull Performer CW CH Presys II Elektro Akustik Gitar", category: "Akustik Gitar", price: "60,041.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Seagull Performer CW Mini Jumbo HG Presys II Elektro Akustik Gitar", category: "Akustik Gitar", price: "56,321.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Yamaha SLG200S Silent Akustik Gitar", category: "Akustik Gitar", price: "50,704.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Epiphone Exclusive Thunderbird '64 4 Telli Bas Gitar", category: "Bas Gitar", price: "50,442.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Stentor 1102/C Student I Çello", category: "Çello", price: "23,873.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Stentor 'thelami' 1016/A Laminate 4/4 Keman", category: "Keman", price: "4,659.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Kinglos DSG 1803 DGS Series 4/4 Elektro Keman", category: "Keman", price: "8,659.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Antigua CL3230S Si Bemol Klarnet", category: "Klarnet", price: "41,647.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Prudencio Saez 6-S (35) Klasik Gitar", category: "Klasik Gitar", price: "32,136.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Yamaha Live Custom Hybrid Oak 14×5.5″ Trampet", category: "Trampet", price: "33,553.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "ALESIS Nitro MAX 8 Parça Elektronik Davul Seti", category: "Davul", price: "19,999.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Yamaha DGB1KENPE Disklavier Akustik Kuyruklu Piyano", category: "Piyano", price: "1,723,404.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "Casio AP-470 Dijital Piyano", category: "Piyano", price: "37,999.00 TL", stock: Math.floor(Math.random() * 50) + 1 },
+            { name: "KAWAI KDP75B Siyah Dijital Piyano", category: "Piyano", price: "30,260.00 TL", stock: Math.floor(Math.random() * 50) + 1 }
+        ];
+
+        const tableBody = document.getElementById("products-table");
+
+        products.forEach(product => {
+            const row = `
+                <tr>
+                    <td>${product.name}</td>
+                    <td>${product.category}</td>
+                    <td>${product.price}</td>
+                    <td>${product.stock}</td>
+                    <td class="action-buttons">
+                        <button class="btn btn-warning btn-sm">Düzenle</button>
+                        <button class="btn btn-danger btn-sm">Sil</button>
+                    </td>
+                </tr>
+            `;
+            tableBody.innerHTML += row;
+        });
+    </script>
+    <script>
+        const ctx = document.getElementById('siteStatisticsChart').getContext('2d');
+        const siteStatisticsChart = new Chart(ctx, {
+            type: 'bar', 
+            data: {
+                labels: ['Toplam Ürün', 'Toplam Sipariş', 'Aktif Kullanıcı', 'Bekleyen Yorum'], // X ekseni etiketleri
+                datasets: [{
+                    label: 'Sayısal Değerler',
+                    data: [15, 128, 65, 12], 
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.7)', 
+                        'rgba(75, 192, 192, 0.7)', 
+                        'rgba(255, 206, 86, 0.7)', 
+                        'rgba(255, 99, 132, 0.7)'  
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)', 
+                        'rgba(75, 192, 192, 1)', 
+                        'rgba(255, 206, 86, 1)', 
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true 
+                    }
+                }
+            }
+        });
+    </script>
+    
+</body>
+
+</html>

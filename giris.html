@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7e4e1; /* Nude toz pembe */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        button {
+            background-color: #ff85a1; /* Açık pembe */
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff6d8a; /* Daha koyu pembe */
+        }
+
+        a {
+            color: #ff6384; /* Pembe */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ff4a6f; /* Daha koyu pembe */
+        }
+
+        .role-selection {
+            margin-top: 15px;
+        }
+
+        .role-selection label {
+            margin-right: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h3 class="text-center">Giriş Yap</h3>
+        <form onsubmit="redirectToPage(event);">
+            <div class="form-group">
+                <label for="email">E-posta:</label>
+                <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <input type="password" class="form-control" id="password" placeholder="Şifrenizi girin" required>
+            </div>
+            <div class="role-selection">
+                <label>
+                    <input type="radio" name="role" value="admin" required> Admin
+                </label>
+                <label>
+                    <input type="radio" name="role" value="user" required> Kullanıcı
+                </label>
+            </div>
+            <button type="submit" class="btn btn-block">Giriş Yap</button>
+        </form>
+        <div class="text-center mt-3">
+            <a href="kayit.html">Hesabınız yok mu? Kayıt Ol</a>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage(event) {
+            event.preventDefault(); // Formun varsayılan gönderimini engelle
+            const role = document.querySelector('input[name="role"]:checked').value;
+            if (role === 'admin') {
+                window.location.href = "adminpaneli.html"; // Admin sayfasına yönlendir
+            } else if (role === 'user') {
+                window.location.href = "anasayfa.html"; // Kullanıcı sayfasına yönlendir
+            }
+        }
+    </script>
+</body>
+
+</html>

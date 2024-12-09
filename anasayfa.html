@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DG Müzik-Ana Sayfa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <style>
+.owl-prev, .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff0303; 
+    color: #fff; 
+    font-size: 30px; 
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    cursor: pointer;
+    z-index: 10;
+}
+
+.owl-prev {
+    left: -30px;
+}
+
+.owl-next {
+    right: -30px; 
+}
+
+.owl-prev:hover, .owl-next:hover {
+    background-color: #555; 
+}
+
+        </style>
+
+
+<head>
+  
+    
+    <style>
+        .navbar-vertical {
+            background-color: #f8f9fa; 
+            z-index: 1050;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+
+        .nav-item .dropdown-menu {
+            background-color: #ffffff !important; 
+            border: 1px solid #ddd; 
+            z-index: 1051; 
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 1049;
+            display: none;
+        }
+
+        .navbar-vertical.show ~ .menu-overlay {
+            display: block;
+        }
+    </style>
+</head>
+
+        
+
+</head>
+
+<body>
+    <!-- Topbar Başlangıcı-->
+    <div class="container-fluid">
+        <div class="row bg-secondary py-2 px-xl-5">
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-dark" href="iletisim.html">İletişim</a>
+                    <span class="text-muted px-2">|</span>
+                    <a class="text-dark" href="iletisim.html">Yardım</a>
+                    <span class="text-muted px-2">|</span>
+                    <a class="text-dark" href="iletisim.html">Destek</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-dark px-2" href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-dark px-2" href="https://x.com/" target="_blank">
+                        <strong>X</strong>
+                    </a>
+                    <a class="text-dark px-2" href="https://www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-dark px-2" href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-dark pl-2" href="https://www.youtube.com" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row align-items-center py-3 px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="anasayfa.html" class="text-decoration-none">
+                    <h1 class="m-0 display-5 font-weight-semi-bold">
+                        <span class="text-primary font-weight-bold border px-3 mr-1">DG</span>Müzik
+                    </h1>
+                </a>
+            </div>
+            <div class="input-group" style="max-width: 900px; margin: auto; position: relative;">
+                <input type="text" id="search-box" class="form-control" placeholder="Ürün Ara">
+                
+                <div id="search-results" class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></div>
+
+
+            </div>
+            
+            <div id="search-results" class="mt-3"></div>
+            
+            <div class="col-lg-3 col-6 text-right">
+               
+                <a href="sepet.html" class="btn border">
+                    <i class="fas fa-shopping-cart text-primary"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Topbar Son-->
+
+
+    <!-- Navbar Başlangıcı-->
+    <div class="container-fluid mb-5">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                    <h6 class="m-0">Kategoriler</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+                    <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Yaylılar <i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="kemanlar.html" class="dropdown-item">Kemanlar</a>
+                                <a href="cellolar.html" class="dropdown-item">Çellolar</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Gitarlar<i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="klasikgitarlar.html" class="dropdown-item">Klasik Gitarlar</a>
+                                <a href="elektrogitarlar.html" class="dropdown-item">Elektro Gitarlar</a>
+                                <a href="akustikgitarlar.html" class="dropdown-item">Akustik Gitarlar</a>
+                                <a href="basgitarlar.html" class="dropdown-item">Bas Gitarlar</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Nefesliler<i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="klarnetler.html" class="dropdown-item">Klarnetler</a>
+                                <a href="yanflutler.html" class="dropdown-item">Yan Flütler</a>
+                                <a href="saksafonlar.html" class="dropdown-item">Saksafonlar</a>
+                            </div>
+                        </div>
+                        <a href="piyanolar.html" class="nav-item nav-link">Piyanolar</a>
+                        <a href="perkusyonlar.html" class="nav-item nav-link">Perküsyonlar</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">DG</span>Müzik</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="anasayfa.html" class="nav-item nav-link ">Ana Sayfa</a>
+                            <a href="tumurunler.html" class="nav-item nav-link">Tüm Ürünler</a>
+                            <div class="nav-item dropdown">
+                                <a href="duyurular.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Hakkımızda</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="duyurular.html" class="dropdown-item">Duyurular</a>
+                                    <a href="misyonvizyon.html" class="dropdown-item">Misyon ve Vizyon</a>
+                                </div>
+                            </div>
+                            <a href="iletisim.html" class="nav-item nav-link">İletişim</a>
+                        </div>
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="anasayfa2.html" class="nav-item nav-link">Çıkış</a>
+                        </div>
+                        
+                    </div>
+                </nav>
+                <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="height: 410px;">
+                            <img class="img-fluid" src="img/slider/sliderilk.webp" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3"></h4>
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">DG Müzik ile Her Nota Bir Hikaye,<br>Her Enstrüman Bir Yolculuk!</h3>
+                                    <a href="tumurunler.html" class="btn btn-light py-2 px-3">Tüm ürünleri Gör</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="height: 410px;">
+                            <img class="img-fluid" src="img/slider/bateri.jpg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3"></h4>
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4"></h3>
+                                    <a href="perk7.html" class="btn btn-light py-2 px-3">Ürünü İncele</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="height: 410px;">
+                            <img class="img-fluid" src="img/slider/piy.jpeg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3"></h4>
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4"></h3>
+                                    <a href="piy6.html" class="btn btn-light py-2 px-3">Ürünü İncele</a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar Son-->
+
+    <div class="container text-center mt-4">
+        <h2 class="text-dark font-weight-bold">MÜZİĞİN BİRLEŞTİRİCİ VE İYİLEŞTİRİCİ DÜNYASINA HOŞ GELDİNİZ</h2>
+        <p class="text-muted">En kaliteli enstrümanlar ve uygun fiyatlarla sizlerleyiz.</p>
+    </div>
+    <div class="container-fluid text-center my-5">
+        <img src="img/Screenshot (42).png" alt="Promosyon Görseli" class="img-fluid centered-banner">
+    </div>
+
+   
+
+
+    <!-- Çok Satanlar -->
+    <div class="container-fluid pt-5">
+        <div class="text-center mb-4">
+            <h2 class="section-title px-5">
+                <a href="coksatanlar.html" class="text-dark text-decoration-none">
+                    <span class="px-2">Çok Satanlar</span>
+                </a>
+            </h2>
+        </div>
+        <div class="owl-carousel owl-theme">
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="akustik1.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/akustikgitarlar/akustik1.jpg" alt="Seagull Performer CW CH Presys II Elektro Akustik Gitar">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Seagull Performer CW CH Presys II Elektro Akustik Gitar</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">60,041.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>86,725.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="akustik1.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Seagull Performer CW CH Presys II Elektro Akustik Gitar',60.041 , 'img/tumurunler/akustikgitarlar/akustik1.jpg')">
+                   
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                 
+                    
+                    
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="piy2.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/piyanolar/piy2.jpg" alt="Yamaha DGB1KENPE Disklavier Akustik Kuyruklu Piyano">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Yamaha DGB1KENPE Disklavier Akustik Kuyruklu Piyano</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">1,723,404.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>2,202,128.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="piy2.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Yamaha DGB1KENPE Disklavier Akustik Kuyruklu Piyano',1723.404 , 'img/tumurunler/piyanolar/piy2.jpg')">
+                  
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="perk1.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/perkusyonlar/perk1.jpg" alt="Yamaha Live Custom Hybrid Oak 14×5.5″ Trampet">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Yamaha Live Custom Hybrid Oak 14×5.5″ Trampet</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">33,553.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>50,330.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="perk1.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Yamaha Live Custom Hybrid Oak 14×5.5″ Trampet',33.553 , 'img/tumurunler/perkusyonlar/perk1.jpg')">
+             
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="keman2.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/kemanlar/keman2.jpg" alt="Kinglos DSG 1803 DGS Series 4/4 Elektro Keman">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Kinglos DSG 1803 DGS Series 4/4 Elektro Keman</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">8,659.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>12,659.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="keman2.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Kinglos DSG 1803 DGS Series 4/4 Elektro Keman',8.659 , 'img/tumurunler/kemanlar/keman2.jpg')">
+                  
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="piy3.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/piyanolar/piy3.jpg" alt="Casio AP-470 Dijital Piyano (Mat Beyaz)">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Casio AP-470 Dijital Piyano (Mat Beyaz)</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">37,999.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>56,999.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="piy3.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Casio AP-470 Dijital Piyano (Mat Beyaz)',37.999 , 'img/tumurunler/piyanolar/piy3.jpg')">
+         
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="klasik3.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/klasikgitarlar/klasik3.jpg" alt="Prudencio Saez 6-S (35) Klasik Gitar">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Prudencio Saez 6-S (35) Klasik Gitar</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">32,136.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>46,418.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="klasik3.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Prudencio Saez 6-S (35) Klasik Gitar',32.136 , 'img/tumurunler/klasikgitarlar/klasik3.jpg')">
+                   
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>
+
+
+    <div class="container-fluid pt-5">
+        <div class="text-center mb-4">
+            <h2 class="section-title px-5">
+                <a href="indirimdekiler.html" class="text-dark text-decoration-none">
+                    <span class="px-2">İndirimdekiler</span>
+                </a>
+            </h2>
+        </div>
+        <div class="owl-carousel owl-theme">
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="cello1.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/cellolar/cello1.jpg" alt="Stentor 1102/C Student I Çello">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Stentor 1102/C Student I Çello</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">23,873.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>33,156.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="cello1.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Stentor 1102/C Student I Çello',23.873 , 'img/tumurunler/cellolar/cello1.jpg')">
+                   
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="bas1.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/basgitarlar/bas1.jpg" alt="Epiphone Exclusive Thunderbird '64 4 Telli Bas Gitar">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Epiphone Exclusive Thunderbird '64 4 Telli Bas Gitar</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">50,442.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>75,663.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="bas1.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Epiphone Exclusive Thunderbird 64 4 Telli Bas Gitar',50.442 , 'img/tumurunler/basgitarlar/bas1.jpg')">
+       
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="klarnet1.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/klarnetler/klarnet1.jpg" alt="Antigua CL3230S Si Bemol Klarnet">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Antigua CL3230S Si Bemol Klarnet</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">41,647.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>49,647.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="klarnet1.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Antigua CL3230S Si Bemol Klarnet',41.647 , 'img/tumurunler/klarnetler/klarnet1.jpg')">
+              
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="keman1.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/kemanlar/keman1.jpg" alt="Stentor 'thelami' 1016/A Laminate 4/4 Keman">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Stentor 'thelami' 1016/A Laminate 4/4 Keman</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">4,659.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>6,729.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="keman1.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Stentor thelami 1016/A Laminate 4/4 Keman',4.659 , 'img/tumurunler/kemanlar/keman1.jpg')">
+                  
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="piy3.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/piyanolar/piy3.jpg" alt="Casio AP-470 Dijital Piyano (Mat Beyaz)">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Casio AP-470 Dijital Piyano (Mat Beyaz)</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">37,999.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>56,999.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="piy3.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Casio AP-470 Dijital Piyano (Mat Beyaz)',37.999 , 'img/tumurunler/piyanolar/piy3.jpg')">
+               
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="akustik1.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/akustikgitarlar/akustik1.jpg" alt="Seagull Performer CW CH Presys II Elektro Akustik Gitar">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Seagull Performer CW CH Presys II Elektro Akustik Gitar</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">60,041.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>86,725.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="akustik1.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Seagull Performer CW CH Presys II Elektro Akustik Gitar',60.041 , 'img/tumurunler/akustikgitarlar/akustik1.jpg')">
+                 
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="piy2.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/piyanolar/piy2.jpg" alt="Yamaha DGB1KENPE Disklavier Akustik Kuyruklu Piyano">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Yamaha DGB1KENPE Disklavier Akustik Kuyruklu Piyano</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">1,723,404.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>2,202,128.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="piy2.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Yamaha DGB1KENPE Disklavier Akustik Kuyruklu Piyano',1723.404 , 'img/tumurunler/piyanolar/piy2.jpg')">
+                 
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="perk1.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/perkusyonlar/perk1.jpg" alt="Yamaha Live Custom Hybrid Oak 14×5.5″ Trampet">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Yamaha Live Custom Hybrid Oak 14×5.5″ Trampet</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">33,553.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>50,330.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="perk1.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Yamaha Live Custom Hybrid Oak 14×5.5 Trampet',33.553 , 'img/tumurunler/perkusyonlar/perk1.jpg')">
+             
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="keman2.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/kemanlar/keman2.jpg" alt="Kinglos DSG 1803 DGS Series 4/4 Elektro Keman">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Kinglos DSG 1803 DGS Series 4/4 Elektro Keman</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">8,659.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>12,659.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="keman2.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Kinglos DSG 1803 DGS Series 4/4 Elektro Keman',8.659 , 'img/tumurunler/kemanlar/keman2.jpg')">
+                   
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+            </div>
+           
+           
+            <div class="card product-item border-0">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <a href="klasik3.html">
+                        <img class="img-fluid mx-auto d-block" src="img/tumurunler/klasikgitarlar/klasik3.jpg" alt="Prudencio Saez 6-S (35) Klasik Gitar">
+                    </a>
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Prudencio Saez 6-S (35) Klasik Gitar</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h6 class="text-primary font-weight-bold">32,136.00 TL</h6>
+                        <h6 class="text-muted ml-2"><del>46,418.00 TL</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="klasik3.html" class="btn btn-sm text-dark p-0">
+                        <i class="fas fa-eye text-primary mr-1"></i>İncele
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-sm text-dark p-0" 
+                    onclick="addToCart('Prudencio Saez 6-S (35) Klasik Gitar',32.136 , 'img/tumurunler/klasikgitarlar/klasik3.jpg')">
+                  
+                     <i class="fas fa-shopping-cart text-primary mr-1"></i>Sepete Ekle
+                 </a>
+                </div>
+                
+            </div>
+        </div>
+      
+    </div>
+
+
+   <!-- Duyurular Başlangıç -->
+<div class="container-fluid pt-5">
+    <div class="text-center mb-4">
+        <h2 class="section-title px-5">
+            <a href="duyurular.html" class="text-dark text-decoration-none">
+                <span class="px-2">Duyurular</span>
+            </a>
+        </h2>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="card border-0 shadow-sm mx-2">
+            <div class="card-body">
+                <h5 class="card-title">Stoklar yenilendi!</h5>
+                <p class="card-text text-muted">En popüler piyanolar yeniden stoklara eklenmiştir.</p>
+                <p class="text-muted small">Yayınlanma Tarihi: 01.12.2024</p>
+                <a href="piyanolar.html" class="btn btn-primary btn-sm">İncele</a>
+            </div>
+        </div>
+        <div class="card border-0 shadow-sm mx-2">
+            <div class="card-body">
+                <h5 class="card-title">Yılbaşı İndirimi Başladı!</h5>
+                <p class="card-text text-muted">%30'a varan indirim fırsatını kaçırmayın.</p>
+                <p class="text-muted small">Yayınlanma Tarihi: 25.11.2024</p>
+                <a href="indirimdekiler.html" class="btn btn-primary btn-sm">İncele</a>
+            </div>
+        </div>
+        <div class="card border-0 shadow-sm mx-2">
+            <div class="card-body">
+                <h5 class="card-title">ALESIS Davul Setinde Dev İndirim!</h5>
+                <p class="card-text text-muted">Bu fırsatı kaçırma!</p>
+                <p class="text-muted small">Yayınlanma Tarihi: 15.11.2024</p>
+                <a href="perk7.html" class="btn btn-primary btn-sm">İncele</a>
+            </div>
+        </div>
+        <div class="card border-0 shadow-sm mx-2">
+            <div class="card-body">
+                <h5 class="card-title">KAWAI Piyano İndirimini Kaçırma!</h5>
+                <p class="card-text text-muted">Mükemmel Başlangıçlar İçin!</p>
+                <p class="text-muted small">Yayınlanma Tarihi: 10.11.2024</p>
+                <a href="piy6.html" class="btn btn-primary btn-sm">İncele</a>
+            </div>
+        </div>
+        <div class="card border-0 shadow-sm mx-2">
+            <div class="card-body">
+                <h5 class="card-title">Black Friday Fırsatları</h5>
+                <p class="card-text text-muted">Black Friday kampanyalarımızdan yararlanın!</p>
+                <p class="text-muted small">Yayınlanma Tarihi: 05.11.2024</p>
+                <a href="indirimdekiler.html" class="btn btn-primary btn-sm">İncele</a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="duyurular.html" class="btn btn-primary px-5 py-2">Tüm Duyuruları Gör</a>
+    </div>
+</div>
+<!-- Duyurular Bitiş -->
+
+   
+  <!-- Markalar Başlangıç -->
+<div class="container-fluid py-5">
+    <div class="text-center mb-4">
+        <h2 class="section-title px-5"><span class="px-2">Markalar</span></h2>
+        <p class="text-muted">En sevilen markalarımızı keşfedin</p>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/casio.jpg" alt="CASIO" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">CASIO</h5>
+        </div>
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/elixir.jpg" alt="ELIXIR" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">ELIXIR</h5>
+        </div>
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/epiphone.jpg" alt="EPIPHONE" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">EPIPHONE</h5>
+        </div>
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/gibson.jpg" alt="GIBSON" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">GIBSON</h5>
+        </div>
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/godin.jpg" alt="GODIN" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">GODIN</h5>
+        </div>
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/jim-dunlop.jpg" alt="JIM DUNLOP" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">JIM DUNLOP</h5>
+        </div>
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/blackstar.jpg" alt="BLACKSTAR" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">BLACKSTAR</h5>
+        </div>
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/schecter.jpg" alt="SCHECTER" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">SCHECTER</h5>
+        </div>
+        <div class="vendor-item border p-4 text-center">
+            <img src="img/markalogo/yamaha.jpg" alt="YAMAHA" class="img-fluid mx-auto" style="max-width: 100px;">
+            <h5 class="mt-2">YAMAHA</h5>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="markalar.html" class="btn btn-primary px-5 py-2">Tüm Markaları Gör</a>
+    </div>
+</div>
+<!-- Markalar Bitiş -->
+
+
+<div class="container-fluid text-center my-5">
+    <img src="img/Screenshot (43).png" alt="Promosyon Görseli" class="img-fluid centered-banner">
+</div>
+
+
+<div class="container-fluid bg-light py-5">
+    <div class="text-center mb-4">
+        <h2 class="section-title px-5">
+            <span class="px-2">İstatistiklerimiz</span>
+        </h2>
+        <p class="text-muted">Memnuniyetiniz, Bizim Önceliğimiz!</p>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h4 id="customer-count" class="text-primary font-weight-bold">0</h4>
+            <p>Müşteri Sayısı</p>
+        </div>
+        <div class="col-md-4">
+            <h4 id="satisfaction-rate" class="text-primary font-weight-bold">0%</h4>
+            <p>Müşteri Memnuniyeti</p>
+        </div>
+        <div class="col-md-4">
+            <h4 id="products-sold" class="text-primary font-weight-bold">0</h4>
+            <p>Satılan Ürünler</p>
+        </div>
+    </div>
+    <div class="mt-4 text-center">
+        <canvas id="stats-chart" width="400" height="300" style="max-width: 100%;"></canvas>
+    </div>
+</div>
+
+<!-- Chart.js Kütüphanesi -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Dinamik Veri Oluşturma
+    const customerCount = Math.floor(Math.random() * 5000) + 1000; 
+    const satisfactionRate = Math.floor(Math.random() * 20) + 80; 
+    const productsSold = Math.floor(Math.random() * 10000) + 5000; 
+
+    document.getElementById('customer-count').innerText = customerCount;
+    document.getElementById('satisfaction-rate').innerText = satisfactionRate + '%';
+    document.getElementById('products-sold').innerText = productsSold;
+
+    const ctx = document.getElementById('stats-chart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar', 
+        data: {
+            labels: ['Müşteri Sayısı', 'Satılan Ürünler'],
+            datasets: [{
+                label: 'İstatistikler',
+                data: [customerCount, productsSold],
+                backgroundColor: [
+    'rgba(228, 187, 188, 0.7)', 
+    'rgba(228, 187, 188, 0.7)'  
+],
+borderColor: [
+    'rgba(228, 187, 188, 0.7)', 
+    'rgba(228, 187, 188, 0.7)'  
+],
+
+
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false, 
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+<div class="container-fluid bg-secondary my-5">
+    <div class="row justify-content-md-center py-5 px-xl-5">
+        <div class="col-md-6 col-12 py-5">
+            <div class="text-center mb-2 pb-2">
+                <h2 class="section-title px-5 mb-3"><span class="bg-secondary px-2">Haberdar Olun</span></h2>
+                <p>En özel fırsatlarımızdan, kampanyalarımızdan ve en yeni ürünlerimizden ilk siz haberdar olun! </p>
+            </div>
+            <form action="javascript:void(0);" onsubmit="showSubscribeMessage()">
+                <div class="input-group">
+                    <input type="email" id="subscribe-email" class="form-control border-white p-4" placeholder="E-mail" required>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary px-4" type="submit">Abone Ol</button>
+                    </div>
+                </div>
+            </form>
+            <div id="subscribe-message" class="mt-3 text-success" style="display: none;">Abone olundu.</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- Footer Başlangıcı-->
+    <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <a href="anasayfa.html" class="text-decoration-none">
+                    <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">DG</span>Müzik</h1>
+                </a>
+                <p>Müziğin birleştirici ve iyileştirici gücüne inanarak geniş ürün yelpazemizle sanatınıza değer katıyoruz.</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>dgmüzik@gmail.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+90 532 123 45 67</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="font-weight-bold text-dark mb-4">Kategoriler</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark" href="kemanlar.html"><i class="fa fa-angle-right mr-2"></i>Kemanlar</a>
+                            <a class="text-dark" href="cellolar.html"><i class="fa fa-angle-right mr-2"></i>Çellolar</a>
+                            <a class="text-dark" href="klasikgitarlar.html"><i class="fa fa-angle-right mr-2"></i>Klasik Gitarlar</a>
+                            <a class="text-dark" href="elektrogitarlar.html"><i class="fa fa-angle-right mr-2"></i>Elektro Gitarlar</a>
+                            <a class="text-dark" href="akustikgitarlar.html"><i class="fa fa-angle-right mr-2"></i>Akustik Gitarlar</a>
+                            <a class="text-dark" href="basgitarlar.html"><i class="fa fa-angle-right mr-2"></i>Bas Gitarlar</a>
+                            <a class="text-dark" href="klarnetler.html"><i class="fa fa-angle-right mr-2"></i>Klarnetler</a>
+                            <a class="text-dark" href="yanflutler.html"><i class="fa fa-angle-right mr-2"></i>Yan Flütler</a>
+                            <a class="text-dark" href="saksafonlar.html"><i class="fa fa-angle-right mr-2"></i>Saksafonlar</a>
+                            <a class="text-dark" href="piyanolar.html"><i class="fa fa-angle-right mr-2"></i>Piyanolar</a>
+                            <a class="text-dark" href="perkusyonlar.html"><i class="fa fa-angle-right mr-2"></i>Perküsyonlar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="font-weight-bold text-dark mb-4">Önemli Bilgiler</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark" href="garantiveiade.html"><i class="fa fa-angle-right mr-2"></i>Garanti ve İade Koşulları</a>
+                            <a class="text-dark" href="kvkk.html"><i class="fa fa-angle-right mr-2"></i>Kişisel Verilerin Korunması</a>
+                            <a class="text-dark" href="gizlilik.html"><i class="fa fa-angle-right mr-2"></i>Gizlilik Politikası</a>
+                            <a class="text-dark" href="aydinlatma.html"><i class="fa fa-angle-right mr-2"></i>Aydınlatma Metni</a>
+                            <a class="text-dark" href="teslimat.html"><i class="fa fa-angle-right mr-2"></i>Teslimat Koşulları</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="font-weight-bold text-dark mb-4">Mağazalarımız</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a href="https://maps.app.goo.gl/8Zr77mFLGZN7DLMu6" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>Kocaeli - Umuttepe Mağazası (Merkez Bina)
+                            </a>
+                            <a href="https://maps.app.goo.gl/dkCQ22j9ydAZ7ppv7" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>İstanbul - Kadıköy Mağazası
+                            </a>
+                            <a href="https://maps.app.goo.gl/51YUvfDeermQBXX49" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>Ankara - Kızılay Mağazası
+                            </a>
+                            <a href="https://maps.app.goo.gl/wzzwNY8VAQ3eKncN9" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>İzmir - Alsancak Mağazası
+                            </a>
+                            <a href="https://maps.app.goo.gl/2ZF1HqbLCWHqmXmc9" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>Bursa - Nilüfer Mağazası
+                            </a>
+                            <a href="https://maps.app.goo.gl/gNGzLB8edaLPGDsD9" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>Antalya - Lara Mağazası
+                            </a>
+                            <a href="https://maps.app.goo.gl/jZsso17A4LQ88ume7" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>Adana - Seyhan Mağazası
+                            </a>
+                            
+                            <a href="https://maps.app.goo.gl/sfQ37Csg8uBSP8LfA" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>Trabzon - Meydan Mağazası
+                            </a>
+                            <a href="https://maps.app.goo.gl/51omSKVi7jmBPgxW7" target="_blank" class="text-dark mb-2">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>Gaziantep - Şehitkamil Mağazası
+                            </a>
+                            <a href="https://maps.app.goo.gl/zK4psef9TetDwavY8" target="_blank" class="text-dark">
+                                <i class="fa fa-map-marker-alt mr-2 text-primary"></i>Eskişehir - Odunpazarı Mağazası
+                            </a>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+        <div class="row border-top border-light mx-xl-5 py-4">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-dark">
+                    &copy; <a class="text-dark font-weight-semi-bold" href="#">DG Müzik | </a> 
+                    
+Bu site <strong>Derya Gelmez</strong> tarafından tasarlanmıştır. Tüm hakları saklıdır.
+
+
+ 
+                    <a class="text-dark font-weight-semi-bold" href="https://htmlcodex.com"></a>
+                </p>
+            </div>
+            
+           
+        </div>
+<div class="mt-4" style="position: relative;">
+    <div class="row bg-light p-3 rounded shadow align-items-center" style="max-width: 2000px; position: absolute; left: 0;">
+        <div class="col-3 text-center">
+            <img src="img/Adsız tasarım.png" alt="Derya Gelmez" class="img-fluid rounded-circle" style="max-width: 80px;">
+        </div>
+        <div class="col-9">
+            <h5 class="font-weight-bold text-dark mb-1">Derya Gelmez Kimdir?</h5>
+            <p class="text-muted mb-0" style="font-size: 14px;">
+                1 Mayıs 2002 doğumlu olan Derya Gelmez, Kocaeli Üniversitesi'nde Bilişim Sistemleri Mühendisliği bölümünde öğrenim görmektedir. 
+                Yazılım geliştirme, web tasarımı ve içerik üretimi konularında uzmanlaşmıştır. 
+                Teknolojiye olan ilgisi ve yenilikçi yaklaşımıyla kullanıcı dostu projelere imza atmaktadır.
+            </p>
+            <div class="mt-2">
+                <a href="https://www.linkedin.com/in/derya-gelmez/" target="_blank" class="text-dark mr-3">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/deryaaglmz/" target="_blank" class="text-dark">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    <!-- Footer Son-->
+
+
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+       $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true, 
+    navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"], 
+    dots: false, 
+    responsive: {
+        0: {
+            items: 1
+        },
+        576: {
+            items: 2
+        },
+        768: {
+            items: 3
+        },
+        992: {
+            items: 4
+        }
+    }
+});
+
+    </script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true, 
+            margin: 15, 
+            nav: true, 
+            navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+            dots: false, 
+            responsive: {
+                0: {
+                    items: 1 
+                },
+                576: {
+                    items: 2 
+                },
+                768: {
+                    items: 3 
+                },
+                992: {
+                    items: 4 
+                },
+                1200: {
+                    items: 5 
+                }
+            }
+        });
+    </script>
+    
+    <script>
+   function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProductIndex = cart.findIndex(product => product.name === name);
+
+    if (existingProductIndex !== -1) {
+        cart[existingProductIndex].quantity += 1;
+    } else {
+        cart.push({ name, price, image, quantity: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+}
+
+
+    </script>
+
+<script>
+    function showSubscribeMessage() {
+        const messageContainer = document.getElementById('subscribe-message');
+
+        // Mesajı görünür yap
+        messageContainer.style.display = 'block';
+
+        // Mesajı 3 saniye sonra gizle
+        setTimeout(() => {
+            messageContainer.style.display = 'none';
+        }, 3000);
+
+        // E-posta girişini temizle
+        document.getElementById('subscribe-email').value = '';
+    }
+</script>
+<script>
+    const products = [
+    { name: "Seagull Performer CW CH Presys II Elektro Akustik Gitar", price: "60,041.00 TL", image: "img/tumurunler/akustikgitarlar/akustik1.jpg", link: "akustik1.html" },
+    { name: "Seagull Performer CW Mini Jumbo HG Presys II Elektro Akustik Gitar", price: "56,321.00 TL", image: "img/tumurunler/akustikgitarlar/akustik2.jpg", link: "akustik2.html" },
+    { name: "Yamaha SLG200S Silent Akustik Gitar", price: "50,704.00 TL", image: "img/tumurunler/akustikgitarlar/akustik3.jpg", link: "akustik3.html" },
+    { name: "Epiphone Exclusive Thunderbird '64 4 Telli Bas Gitar", price: "50,442.00 TL", image: "img/tumurunler/basgitarlar/bas1.jpg", link: "bas1.html" },
+    { name: "Stentor 1102/C Student I Çello", price: "23,873.00 TL", image: "img/tumurunler/cellolar/cello1.jpg", link: "cello1.html" },
+    { name: "Stentor 'thelami' 1016/A Laminate 4/4 Keman", price: "4,659.00 TL", image: "img/tumurunler/kemanlar/keman1.jpg", link: "keman1.html" },
+    { name: "Kinglos DSG 1803 DGS Series 4/4 Elektro Keman", price: "8,659.00 TL", image: "img/tumurunler/kemanlar/keman2.jpg", link: "keman2.html" },
+    { name: "Antigua CL3230S Si Bemol Klarnet", price: "41,647.00 TL", image: "img/tumurunler/klarnetler/klarnet1.jpg", link: "klarnet1.html" },
+    { name: "Prudencio Saez 6-S (35) Klasik Gitar", price: "32,136.00 TL", image: "img/tumurunler/klasikgitarlar/klasik3.jpg", link: "klasik3.html" },
+    { name: "Yamaha Live Custom Hybrid Oak 14×5.5″ Trampet", price: "33,553.00 TL", image: "img/tumurunler/perkusyonlar/perk1.jpg", link: "perk1.html" },
+    { name: "ALESIS Nitro MAX 8 Parça Elektronik Davul Seti", price: "19.999 TL", image: "img/tumurunler/perkusyonlar/perk7.jpg", link: "perk7.html" },
+    { name: "Yamaha DGB1KENPE Disklavier Akustik Kuyruklu Piyano", price: "1,723,404.00 TL", image: "img/tumurunler/piyanolar/piy2.jpg", link: "piy2.html" },
+    { name: "Casio AP-470 Dijital Piyano", price: "37,999.00 TL", image: "img/tumurunler/piyanolar/piy2.jpg", link: "piy3.html" },
+    { name: "KAWAI KDP75B Siyah Dijital Piyano", price: "30.260 TL", image: "img/tumurunler/piyanolar/piy6.jpg", link: "piy6.html" },
+    ];
+
+    function searchProducts() {
+        const query = document.getElementById('search-box').value.toLowerCase(); 
+        const results = products.filter(product => product.name.toLowerCase().includes(query)); 
+
+        const resultsContainer = document.getElementById('search-results');
+        resultsContainer.innerHTML = ''; 
+
+        if (query) {
+            results.forEach(product => {
+                const resultItem = `
+                    <a href="${product.link}" class="dropdown-item d-flex align-items-center">
+                        <img src="${product.image}" alt="${product.name}" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
+                        <div>
+                            <h6 class="mb-0">${product.name}</h6>
+                            <small class="text-muted">${product.price}</small>
+                        </div>
+                    </a>
+                `;
+                resultsContainer.innerHTML += resultItem;
+            });
+            resultsContainer.style.display = 'block'; 
+        } else {
+            resultsContainer.style.display = 'none'; 
+        }
+    }
+
+    document.getElementById('search-box').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            searchProducts();
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        const resultsContainer = document.getElementById('search-results');
+        if (!resultsContainer.contains(event.target) && event.target.id !== 'search-box') {
+            resultsContainer.style.display = 'none';
+        }
+    });
+</script>
+
+
+ 
+<script>
+    function showMessage(message) {
+        const messageContainer = document.createElement('div');
+        messageContainer.textContent = message;
+        messageContainer.style.position = 'fixed';
+        messageContainer.style.bottom = '20px';
+        messageContainer.style.right = '20px';
+        messageContainer.style.backgroundColor = '#28a745'; 
+        messageContainer.style.color = '#fff';
+        messageContainer.style.padding = '10px 20px';
+        messageContainer.style.borderRadius = '5px';
+        messageContainer.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        messageContainer.style.zIndex = '1000';
+    
+        document.body.appendChild(messageContainer);
+    
+        setTimeout(() => {
+            messageContainer.remove();
+        }, 3000);
+    }
+    
+    
+        function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingProductIndex = cart.findIndex(product => product.name === name);
+    
+        if (existingProductIndex !== -1) {
+            cart[existingProductIndex].quantity += 1;
+        } else {
+            cart.push({ name, price, image, quantity: 1 });
+        }
+    
+        localStorage.setItem('cart', JSON.stringify(cart));
+        showMessage(`"${name}" adlı ürün sepete eklendi!`);
+    }
+         
+             </script>
+
+<div class="menu-overlay"></div>
+
+
+</body>
+
+</html>
