@@ -35,7 +35,8 @@
 ## 📂 Kod ve Proje Erişimi
 - **Kodlar**: [Google Drive Proje Linki](https://drive.google.com/drive/folders/1jDQNPED_2Lo8AChtvYUAUJF64QSJB_XE?usp=drive_link)
 
-
+## Proje Raporu
+[Proje Raporunu Görüntüle](https://github.com/DeryaGelmez/DGM-zik/221307055.pdf)
 ---
 
 🎶 **Hayatına Melodi Kat, DG Müzik ile Ritmi Yakala!** 🎵
